@@ -1,3 +1,11 @@
+# OS X files
+.DS_Store
+Thumbs.db
+
+# Generated files
+package-lock.json
+dist
+
 # Logs
 logs
 *.log
