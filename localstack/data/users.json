@@ -1,0 +1,136 @@
+{
+  "users": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "1"
+          },
+          "customerId": {
+            "N": "1"
+          },
+          "name": {
+            "S": "山田一郎"
+          },
+          "nameFurigana": {
+            "S": "ヤマダイチロウ"
+          },
+          "address": {
+            "S": "東京都新宿区1-1"
+          },
+          "isDelete": {
+            "N": "0"
+          },
+          "createdId": {
+            "N": "1"
+          },
+          "createdAt": {
+            "S": "20171231235959"
+          },
+          "modifiedId": {
+            "N": "2"
+          },
+          "modifiedAt": {
+            "S": "20181231235959"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "2"
+          },
+          "customerId": {
+            "N": "1"
+          },
+          "name": {
+            "S": "山田次郎"
+          },
+          "nameFurigana": {
+            "S": "ヤマダジロウ"
+          },
+          "address": {
+            "S": "東京都新宿区1-2"
+          },
+          "isDelete": {
+            "N": "0"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "3"
+          },
+          "customerId": {
+            "N": "2"
+          },
+          "name": {
+            "S": "山田三郎"
+          },
+          "nameFurigana": {
+            "S": "ヤマダサブロウ"
+          },
+          "address": {
+            "S": "東京都新宿区2-1"
+          },
+          "isDelete": {
+            "N": "0"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "4"
+          },
+          "customerId": {
+            "N": "2"
+          },
+          "name": {
+            "S": "山田四郎"
+          },
+          "nameFurigana": {
+            "S": "ヤマダサシロウ"
+          },
+          "address": {
+            "S": "東京都新宿区2-2"
+          },
+          "isDelete": {
+            "N": "1"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "5"
+          },
+          "customerId": {
+            "N": "3"
+          },
+          "name": {
+            "S": "山田五郎"
+          },
+          "nameFurigana": {
+            "S": "ヤマダサゴロウ"
+          },
+          "address": {
+            "S": "東京都新宿区3-1"
+          },
+          "isDelete": {
+            "N": "0"
+          }
+        }
+      }
+    }
+  ]
+}

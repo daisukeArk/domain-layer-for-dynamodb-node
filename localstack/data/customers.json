@@ -1,0 +1,70 @@
+{
+  "customers": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "1"
+          },
+          "name": {
+            "S": "1番"
+          },
+          "address": {
+            "S": "東京都新宿区1"
+          },
+          "isDelete": {
+            "N": "0"
+          },
+          "createdId": {
+            "N": "1"
+          },
+          "createdAt": {
+            "S": "20171231235959"
+          },
+          "modifiedId": {
+            "N": "2"
+          },
+          "modifiedAt": {
+            "S": "20181231235959"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "2"
+          },
+          "name": {
+            "S": "2番"
+          },
+          "address": {
+            "S": "東京都新宿区2"
+          },
+          "isDelete": {
+            "N": "0"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {
+            "N": "3"
+          },
+          "name": {
+            "S": "3番"
+          },
+          "address": {
+            "S": "東京都新宿区3"
+          },
+          "isDelete": {
+            "N": "1"
+          }
+        }
+      }
+    }
+  ]
+}
