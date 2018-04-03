@@ -46,6 +46,7 @@
       "jsx-double"
     ],
     "strict-boolean-expressions": false,
+    "switch-final-break": false,
     "trailing-comma": [
       true,
       {

@@ -1,7 +1,13 @@
+import * as Enums from '../enums';
+
 /**
  * リポジトリ条件基底クラス
  */
 export abstract class ConditionBase {
+  /**
+   * 対象テーブル名
+   */
+  public abstract get tableName(): Enums.TableNames;
 
   /**
    * DynamoDB getItem パラメータ条件 インタフェース

@@ -7,9 +7,9 @@ import { Bootstrap } from '../../../bootstrap';
 
 import { UserCollection as Collection } from '../../../../src/lib/collections';
 import { UserCondition as Condition } from '../../../../src/lib/conditions';
+import { ServiceFacade } from '../../../../src/lib/facades/service-facade';
+import { ServiceFactory } from '../../../../src/lib/factories/service-factory';
 import { IUser as Entity } from '../../../../src/lib/models';
-import { UserRepository as Repository } from '../../../../src/lib/repositories';
-
 import { usersTestData as TestData } from '../../../data/users-test-data';
 
 // ブートストラップ
@@ -18,21 +18,19 @@ Bootstrap.run();
 // DBコンテキスト作成
 let dbContext: AWS.DynamoDB.DocumentClient;
 
-// リポジトリインスタンス作成
-let target: Repository;
+// ファサード
+let facade: ServiceFacade;
 
 /**
  * テスト
  */
-describe('user-repositoryのテスト', () => {
+describe('service-facadeのテスト', () => {
 
   /**
    * 前処理
    */
   before(async () => {
     dbContext = new AWS.DynamoDB.DocumentClient();
-
-    target = new Repository(dbContext);
 
     try {
       // テストデータ登録
@@ -43,6 +41,9 @@ describe('user-repositoryのテスト', () => {
       console.log('ERROR');
       console.log(error);
     }
+
+    // サービスファサードインスタンス作成
+    facade = new ServiceFacade(new ServiceFactory());
   });
 
   /**
@@ -81,7 +82,7 @@ describe('user-repositoryのテスト', () => {
       };
 
       // 実行
-      const result = await target.getAsync(condition);
+      const result = <Entity>await facade.getAsync(condition);
 
       if (result === undefined) {
         Assert.fail('データが取得できませんでした。');
@@ -124,7 +125,7 @@ describe('user-repositoryのテスト', () => {
       };
 
       // 実行
-      const result = await target.queryAsync(condition);
+      const result = <Collection>await facade.queryAsync(condition);
 
       if (result.Count === undefined || result.Count <= 0) {
         Assert.fail('データが取得できませんでした。');
